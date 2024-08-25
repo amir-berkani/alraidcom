@@ -1,0 +1,116 @@
+.designThe {
+  margin: 0;
+}
+.designTheFutureContainer {
+  margin: 0;
+  width: 533px;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.informationalServices {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.alraidProGroupContainer {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  letter-spacing: -0.5px;
+  font-weight: 400;
+  font-family: inherit;
+  z-index: 2;
+}
+.designTheFutureParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.contactUs {
+  position: relative;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-lato);
+  color: var(--color-darkslategray-100);
+  text-align: left;
+  display: inline-block;
+  min-width: 104px;
+}
+.primaryButton {
+  cursor: pointer;
+  border: 2px solid var(--color-darkslategray-200);
+  padding: var(--padding-2xs) var(--padding-3xs);
+  background-color: transparent;
+  flex: 1;
+  border-radius: var(--br-24xl);
+  flex-direction: row;
+  z-index: 1;
+}
+.primaryButton:hover {
+  background-color: var(--color-slategray-200);
+  border: 2px solid var(--color-slategray-100);
+  box-sizing: border-box;
+}
+.frameParent,
+.homepage3Inner,
+.primaryButton,
+.primaryButtonParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.primaryButtonParent {
+  width: 276px;
+  flex-direction: row;
+  gap: var(--gap-xl);
+}
+.frameParent,
+.homepage3Inner {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frameParent {
+  height: 373.9px;
+  flex-direction: column;
+  padding: 0 0 var(--padding-41xl-9);
+  gap: var(--gap-mini);
+}
+.homepage3Inner {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-12xl) var(--padding-287xl-1);
+  text-align: left;
+  font-size: var(--font-size-75xl);
+  color: var(--color-darkslategray-100);
+  font-family: var(--font-lato);
+}
+@media screen and (max-width: 1050px) {
+  .designTheFutureContainer {
+    font-size: var(--font-size-28xl);
+  }
+}
+@media screen and (max-width: 750px) {
+  .homepage3Inner {
+    padding-bottom: var(--padding-180xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .designTheFutureContainer {
+    font-size: var(--font-size-9xl);
+  }
+  .alraidProGroupContainer {
+    font-size: var(--font-size-lgi);
+  }
+  .frameParent {
+    padding-bottom: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+}

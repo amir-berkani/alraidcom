@@ -1,0 +1,86 @@
+.pro01Last1 {
+  height: 138px;
+  width: 138px;
+  position: relative;
+  object-fit: cover;
+  z-index: 1;
+}
+.company,
+.faqs,
+.home,
+.pricing,
+.services {
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  color: inherit;
+  display: inline-block;
+  min-width: 49px;
+  z-index: 1;
+}
+.company,
+.faqs,
+.pricing,
+.services {
+  left: 74px;
+  min-width: 84px;
+}
+.faqs,
+.pricing,
+.services {
+  left: 182px;
+  min-width: 79px;
+}
+.faqs,
+.pricing {
+  left: 286px;
+  min-width: 85px;
+}
+.faqs {
+  left: 395px;
+  min-width: 79px;
+}
+.homeParent {
+  margin: 0;
+  align-self: stretch;
+  height: 20px;
+  position: relative;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-midnightblue);
+  font-family: var(--font-inter);
+}
+.buttonWrapper,
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.navigation {
+  margin: 0;
+  height: 77px;
+  width: 503px;
+  padding: 0 var(--padding-10xl) 0 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.buttonWrapper {
+  height: 91px;
+}
+.pro01Last1Parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 100%;
+  gap: var(--gap-xl);
+}
+@media screen and (max-width: 1200px) {
+  .pro01Last1Parent {
+    flex-wrap: wrap;
+  }
+}
