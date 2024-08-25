@@ -1,32 +1,37 @@
-import { FunctionComponent } from "react";
 import Button from "./Button";
-import styles from "./FrameComponent.module.css";
+import PropTypes from "prop-types";
 
-export type FrameComponentType = {
-  className?: string;
-};
-
-const FrameComponent: FunctionComponent<FrameComponentType> = ({
-  className = "",
-}) => {
+const FrameComponent = ({ className = "" }) => {
   return (
-    <header className={[styles.pro01Last1Parent, className].join(" ")}>
+    <header
+      className={`self-stretch flex flex-row items-end justify-between max-w-full gap-5 lg:flex-wrap ${className}`}
+    >
       <img
-        className={styles.pro01Last1}
+        className="h-[138px] w-[138px] relative object-cover z-[1]"
         loading="lazy"
         alt=""
         src="/pro01--last-1@2x.png"
       />
-      <nav className={styles.navigation}>
-        <nav className={styles.homeParent}>
-          <a className={styles.home}>HOME</a>
-          <a className={styles.company}>COMPANY</a>
-          <a className={styles.services}>SERVICES</a>
-          <a className={styles.pricing}>PARTNERS</a>
-          <a className={styles.faqs}>CONTACT</a>
+      <nav className="m-0 h-[77px] w-[503px] flex flex-col items-start justify-start py-0 pl-0 pr-[29px] box-border max-w-full">
+        <nav className="m-0 self-stretch h-5 relative text-left text-base text-midnightblue font-inter">
+          <a className="[text-decoration:none] absolute top-[0px] left-[0px] font-semibold text-[inherit] inline-block min-w-[49px] z-[1]">
+            HOME
+          </a>
+          <a className="[text-decoration:none] absolute top-[0px] left-[74px] font-semibold text-[inherit] inline-block min-w-[84px] z-[1]">
+            COMPANY
+          </a>
+          <a className="[text-decoration:none] absolute top-[0px] left-[182px] font-semibold text-[inherit] inline-block min-w-[79px] z-[1]">
+            SERVICES
+          </a>
+          <a className="[text-decoration:none] absolute top-[0px] left-[286px] font-semibold text-[inherit] inline-block min-w-[85px] z-[1]">
+            PARTNERS
+          </a>
+          <a className="[text-decoration:none] absolute top-[0px] left-[395px] font-semibold text-[inherit] inline-block min-w-[79px] z-[1]">
+            CONTACT
+          </a>
         </nav>
       </nav>
-      <div className={styles.buttonWrapper}>
+      <div className="h-[91px] flex flex-col items-start justify-start">
         <Button
           propBackgroundColor="#041449"
           buttonText="LOGIN/SIGNUP"
@@ -35,6 +40,10 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
       </div>
     </header>
   );
+};
+
+FrameComponent.propTypes = {
+  className: PropTypes.string,
 };
 
 export default FrameComponent;

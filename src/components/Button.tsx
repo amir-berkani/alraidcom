@@ -1,28 +1,19 @@
-import { FunctionComponent, useMemo, type CSSProperties } from "react";
-import styles from "./Button.module.css";
+import { useMemo } from "react";
+import PropTypes from "prop-types";
 
-export type ButtonType = {
-  className?: string;
-  buttonText?: string;
-
-  /** Style props */
-  propBackgroundColor?: CSSProperties["backgroundColor"];
-  propMinWidth?: CSSProperties["minWidth"];
-};
-
-const Button: FunctionComponent<ButtonType> = ({
+const Button = ({
   className = "",
   propBackgroundColor,
   buttonText,
   propMinWidth,
 }) => {
-  const buttonStyle: CSSProperties = useMemo(() => {
+  const buttonStyle = useMemo(() => {
     return {
       backgroundColor: propBackgroundColor,
     };
   }, [propBackgroundColor]);
 
-  const buttonTextStyle: CSSProperties = useMemo(() => {
+  const buttonTextStyle = useMemo(() => {
     return {
       minWidth: propMinWidth,
     };
@@ -30,14 +21,26 @@ const Button: FunctionComponent<ButtonType> = ({
 
   return (
     <button
-      className={[styles.button, className].join(" ")}
+      className={`cursor-pointer [border:none] py-3 px-[17px] bg-darkslategray-200 rounded-18xl flex flex-row items-start justify-start whitespace-nowrap z-[1] hover:bg-slategray-100 ${className}`}
       style={buttonStyle}
     >
-      <div className={styles.buttonText} style={buttonTextStyle}>
+      <div
+        className="relative text-sm leading-[150%] font-inter text-white text-center inline-block min-w-[92px]"
+        style={buttonTextStyle}
+      >
         {buttonText}
       </div>
     </button>
   );
+};
+
+Button.propTypes = {
+  className: PropTypes.string,
+  buttonText: PropTypes.string,
+
+  /** Style props */
+  propBackgroundColor: PropTypes.any,
+  propMinWidth: PropTypes.any,
 };
 
 export default Button;
